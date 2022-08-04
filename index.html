@@ -36,6 +36,13 @@
             zoom: 17,
             center: { lat: -37.672162, lng: 145.029302 }
         });
+
+        var old_position = new google.maps.Marker({
+          position: {lat: -37.672162, lng: 145.029302 },
+          map: zombie_map,
+          icon: player_emoji
+          }); 
+
       
       if(navigator.geolocation) {
         navigator.geolocation.watchPosition(set_my_position);
@@ -44,13 +51,7 @@
         alert("Geolocation doesn't work in your browser");
         console.log('issue with geo on phone')
       }
-      
-      var old_position = new google.maps.Marker({
-          position: {lat: -37.672162, lng: 145.029302 },
-          map: zombie_map,
-          icon: player_emoji
-          }); 
-      
+     
       for (var i=0; i < markers.length; i++) {
         var marker_data = markers[i].trim();
         marker_data = marker_data.split(" ");
