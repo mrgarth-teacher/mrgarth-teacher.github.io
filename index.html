@@ -23,7 +23,7 @@
     <script>
     var zombie_map;
     var old_position;
-    var player_emoji = "https://cdn.glitch.global/7aa0d2ef-d063-42ad-87de-86cf4db6de0a/player.png?v=1659571395440"
+    var player_emoji = "https://cdn.glitch.global/7aa0d2ef-d063-42ad-87de-86cf4db6de0a/player.png?v=1659571395440";
     var old_position = new google.maps.Marker({
           position: {lat: -37.672162, lng: 145.029302 },
           map: zombie_map,
@@ -75,7 +75,7 @@
       old_position.setMap(null);
       console.log(position.coords.latitude,position.coords.longitude);
       var pos = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-      var player_emoji = "https://cdn.glitch.global/7aa0d2ef-d063-42ad-87de-86cf4db6de0a/player.png?v=1659571395440"
+      var player_emoji = "https://cdn.glitch.global/7aa0d2ef-d063-42ad-87de-86cf4db6de0a/player.png?v=1659571395440";
       var marker = new google.maps.Marker({
           position: pos,
           map: zombie_map,
