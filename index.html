@@ -24,9 +24,7 @@
     var zombie_map;
     var old_position;
     var player_emoji = "https://cdn.glitch.global/7aa0d2ef-d063-42ad-87de-86cf4db6de0a/player.png?v=1659571395440";
-    
-      
-      
+          
     var all_markers=[];
     var data = `-37.67143167629509 145.02844369311524 https://cdn.glitch.global/fc3a5f45-0214-43fd-ba2a-2e0bd9dbce2f/zombie.png?v=1659486545789
     -37.672178984186694 145.02854025263977 https://cdn.glitch.global/fc3a5f45-0214-43fd-ba2a-2e0bd9dbce2f/zombie.png?v=1659486545789
@@ -47,13 +45,13 @@
         console.log('issue with geo on phone')
       }
       
-      for (var i=0; i < markers.length; i++) {
-        var old_position = new google.maps.Marker({
+      var old_position = new google.maps.Marker({
           position: {lat: -37.672162, lng: 145.029302 },
           map: zombie_map,
           icon: player_emoji
-          });  
-        
+          }); 
+      
+      for (var i=0; i < markers.length; i++) {
         var marker_data = markers[i].trim();
         marker_data = marker_data.split(" ");
         var latitude = marker_data[0];
